@@ -2,7 +2,7 @@ const connectToMongo = require('./db');
 const express = require('express');
 
 const app = express();
-const port = 5000;
+const port = 6000;
 
 connectToMongo();
 
@@ -12,6 +12,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello Shravani');
 });
+
 
 // Corrected route for your auth API
 app.use('/api/auth', require('./routes/auth'));
